@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist Luận văn & Đời sống</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fdfcfb;
+      margin: 0;
+      padding: 2em;
+      color: #333;
+    }
+
+    h1 {
+      color: #2e86c1;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffffee;
+      border-radius: 12px;
+      padding: 2em;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    }
+
+    .section {
+      margin: 2em auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5em 2em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2874a6;
+      border-bottom: 2px solid #aed6f1;
+      padding-bottom: 0.3em;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      margin: 1em 0;
+      font-size: 1.05em;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+      padding: 0.3em;
+      border-radius: 6px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.3);
+      margin-right: 0.7em;
+      accent-color: #3498db;
+    }
+
+    input[type="checkbox"]:checked + span {
+      opacity: 0.6;
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: transparent;
+    }
+
+    input[type="checkbox"]:checked + span::before {
+      background-color: #f9d6d5;
+      border-radius: 6px;
+    }
+
+    label.checked {
+      background-color: #f9d6d5;
+    }
+
+    button {
+      padding: 0.4em 0.8em;
+      margin: 0.5em 0;
+      font-size: 1em;
+      background-color: #d6eaf8;
+      color: #1b4f72;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #aed6f1;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>📘 Checklist Luận văn & Đời sống</h1>
+
+  <div class="section" id="section-1">
+    <h2>📘 1. CHUẨN HÓA NGUỒN TÀI LIỆU (3–5 ngày)</h2>
+    <button onclick="resetSection('section-1')">↺ Reset</button>
+    <label><input type="checkbox"><span>Tìm kiếm tài liệu học thuật từ Google Scholar, thư viện số, tài liệu thầy cô</span></label>
+    <label><input type="checkbox"><span>Chọn 20–30 tài liệu cốt lõi, phân nhóm chủ đề nhỏ</span></label>
+    <label><input type="checkbox"><span>Lập bảng theo dõi tài liệu: tác giả – năm – nguồn – chủ đề</span></label>
+    <label><input type="checkbox"><span>Tập hợp tài liệu vào folder 📁 02_Tài liệu tham khảo</span></label>
+    <label><input type="checkbox"><span>Cài Zotero/Mendeley để trích dẫn theo chuẩn APA</span></label>
+    <label><input type="checkbox"><span>Đọc kỹ 5–7 tài liệu nền tảng và ghi chú nội dung chính</span></label>
+    <label><input type="checkbox"><span>Tóm tắt mỗi tài liệu 3–5 dòng phục vụ viết chương lý luận</span></label>
+  </div>
+
+  <div class="section" id="section-2">
+    <h2>📋 2. LÊN KHUNG BẢNG HỎI & PHỎNG VẤN SƠ BỘ (3 ngày)</h2>
+    <button onclick="resetSection('section-2')">↺ Reset</button>
+    <label><input type="checkbox"><span>Phân nhóm mục tiêu nghiên cứu thành nhóm vấn đề chính</span></label>
+    <label><input type="checkbox"><span>Soạn bảng hỏi định lượng 15–25 câu hỏi (Likert/trắc nghiệm)</span></label>
+    <label><input type="checkbox"><span>Thiết kế Google Form và test logic câu hỏi</span></label>
+    <label><input type="checkbox"><span>Soạn kịch bản phỏng vấn định tính (lời dẫn – mở – trọng tâm – chốt)</span></label>
+    <label><input type="checkbox"><span>Liệt kê đối tượng phỏng vấn dự kiến (5–10 người)</span></label>
+    <label><input type="checkbox"><span>Kiểm tra thiết bị ghi âm và app hỗ trợ</span></label>
+  </div>
+
+  <div class="section" id="section-3">
+    <h2>📊 3. LÊN KẾ HOẠCH KHẢO SÁT CHI TIẾT (2–3 ngày)</h2>
+    <button onclick="resetSection('section-3')">↺ Reset</button>
+    <label><input type="checkbox"><span>Ước lượng số lượng mẫu, thời gian khảo sát, phương thức</span></label>
+    <label><input type="checkbox"><span>Chuẩn bị giấy giới thiệu khảo sát</span></label>
+    <label><input type="checkbox"><span>Soạn cam kết bảo mật thông tin (cho phỏng vấn sâu)</span></label>
+    <label><input type="checkbox"><span>Soạn email hoặc tin nhắn mẫu gửi người khảo sát</span></label>
+  </div>
+
+  <div class="section" id="section-4">
+    <h2>🗂 4. TỔ CHỨC THƯ MỤC & CÔNG CỤ (1 buổi – 1 ngày)</h2>
+    <button onclick="resetSection('section-4')">↺ Reset</button>
+    <label><input type="checkbox"><span>Tạo hệ thống thư mục Drive: 01_Đề cương, 02_Tài liệu tham khảo, 03_Dữ liệu khảo sát, 04_Nháp luận văn</span></label>
+    <label><input type="checkbox"><span>Chuẩn bị sẵn Excel/Google Sheet thống kê</span></label>
+    <label><input type="checkbox"><span>Cài SPSS hoặc R (nếu cần xử lý số liệu nâng cao)</span></label>
+    <label><input type="checkbox"><span>Dùng Word/NVivo để phân tích định tính</span></label>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox, index) => {
+      const saved = localStorage.getItem('checkbox_' + index);
+      if (saved === 'true') {
+        checkbox.checked = true;
+        checkbox.parentElement.classList.add('checked');
+      }
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem('checkbox_' + index, checkbox.checked);
+        checkbox.parentElement.classList.toggle('checked', checkbox.checked);
+      });
+    });
+
+    function resetSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      const inputs = section.querySelectorAll('input[type="checkbox"]');
+      const allCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+      inputs.forEach((checkbox) => {
+        const index = allCheckboxes.indexOf(checkbox);
+        localStorage.removeItem('checkbox_' + index);
+        checkbox.checked = false;
+        checkbox.parentElement.classList.remove('checked');
+      });
+    }
+  </script>
+</div>
+</body>
+</html>
